@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{537A86B5-D86A-37B5-F934-BEEB77675393}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_scripts/EnemySpawner.cs">
+    <Files>
+      <File FileName="Assets/_scripts/EnemySpawner.cs" Line="31" Column="35" />
+      <File FileName="Assets/_scripts/Destroy.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9eda527a-a14f-413d-8fb0-06d74db73bb8" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
