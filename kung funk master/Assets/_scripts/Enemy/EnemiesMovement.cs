@@ -3,11 +3,11 @@
 public class EnemiesMovement : MonoBehaviour, IPoolInterface
 {
     public float mSpeed = 5;
-    public Transform left, right;
+    private Transform left, right;
     private Vector3 localScale;
     public bool movingR = true;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     static EnemiesMovement _instance;
 

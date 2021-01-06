@@ -20,7 +20,8 @@ public class ProjectileAttack : MonoBehaviour
     public LayerMask playerLayerMask;
     private float hitRadius = .22f;
 
-    Rigidbody2D rb2D;
+    private Rigidbody2D rb2D;
+
 
     static ProjectileAttack _instance;
 
@@ -41,7 +42,7 @@ public class ProjectileAttack : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        rb2D = GetComponent<Rigidbody2D>();
+        rb2D = EnemiesMovement.instance.rb;
     }
 
     // Update is called once per frame
@@ -67,13 +68,11 @@ public class ProjectileAttack : MonoBehaviour
 
             if (attackChance >= 5f)
             {
-                anim.SetBool("isThrowing", true);
-                GameObject hatProjectile = PoolManager.instance.ReuseObject("hat", throwPoint.position, Quaternion.identity);
+                HighThrow();
             }
             else
             {
-                anim.SetBool("isLowThrow", true);
-                GameObject hatProjectile = PoolManager.instance.ReuseObject("hat", lowThrowPoint.position, Quaternion.identity);
+                LowThrow();
             }
 
         }
@@ -86,6 +85,18 @@ public class ProjectileAttack : MonoBehaviour
             rb2D.constraints = RigidbodyConstraints2D.None;
         }
 
+    }
+
+    private void LowThrow()
+    {
+        anim.SetBool("isLowThrow", true);
+        GameObject hatProjectile = PoolManager.instance.ReuseObject("hat", lowThrowPoint.position, Quaternion.identity);
+    }
+
+    private void HighThrow()
+    {
+        anim.SetBool("isThrowing", true);
+        GameObject hatProjectile = PoolManager.instance.ReuseObject("hat", throwPoint.position, Quaternion.identity);
     }
 
     private void CountDownToAttack()

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
     Animator anim;
 
     public float moveSpeed, forX, upY = 3f;
@@ -73,15 +73,15 @@ public class Movement : MonoBehaviour
             Idle();
     }
     private void FixedUpdate()
-    {   
-        if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f) 
+    {
+        if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
             transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
-            if (Input.GetAxisRaw("Horizontal")> 0.5f && !facingLeft)
-            Flip();
+            if (Input.GetAxisRaw("Horizontal") > 0.5f && !facingLeft)
+                Flip();
             facingLeft = true;
         }
-        else if (Input.GetAxisRaw("Horizontal")< 0.5f && facingLeft)
+        else if (Input.GetAxisRaw("Horizontal") < 0.5f && facingLeft)
         {
             Flip();
             facingLeft = false;

@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 6474734321998875455}
   - component: {fileID: 6474734321998875454}
   - component: {fileID: 6474734321998875425}
-  - component: {fileID: 7818676664446169540}
   m_Layer: 9
   m_Name: strongType
   m_TagString: Enemies
@@ -152,32 +151,6 @@ MonoBehaviour:
   left: {fileID: 0}
   right: {fileID: 0}
   movingR: 1
---- !u!114 &7818676664446169540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6474734321998875424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37d4b96856b831746b5d8f2a279d10e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwRayLength: 10
-  offsetRay: {x: 0, y: -0.84, z: 0}
-  throwPoint: {fileID: 6728800085467448355}
-  lowThrowPoint: {fileID: 6453115166313194732}
-  projectileTimer: 0
-  minTimeBtwnAttacks: 0.5
-  maxTimeBtwnAttacks: 2
-  minChance: 0
-  maxChance: 10
-  canThrow: 0
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  anim: {fileID: 6474734323051351939}
 --- !u!1 &6474734322351400190
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +197,7 @@ GameObject:
   - component: {fileID: 6474734323051351941}
   - component: {fileID: 6474734323051351939}
   - component: {fileID: 6474734323051351938}
+  - component: {fileID: 4344289235149833567}
   m_Layer: 9
   m_Name: stAnimation
   m_TagString: Enemies
@@ -316,6 +290,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4344289235149833567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6474734323051351940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d4b96856b831746b5d8f2a279d10e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwRayLength: 10
+  offsetRay: {x: 0, y: 0.84, z: 0}
+  throwPoint: {fileID: 6728800085467448355}
+  lowThrowPoint: {fileID: 6453115166313194732}
+  projectileTimer: 0
+  minTimeBtwnAttacks: 0.5
+  maxTimeBtwnAttacks: 2
+  minChance: 0
+  maxChance: 10
+  canThrow: 0
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  anim: {fileID: 6474734323051351939}
 --- !u!1 &6488512218700926431
 GameObject:
   m_ObjectHideFlags: 0
