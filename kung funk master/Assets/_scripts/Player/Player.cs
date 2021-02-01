@@ -49,9 +49,6 @@ public class Player : MonoBehaviour
     public float kickRadius = .25f;
     public int kickDamage = 25;
     [Header("Crouch Kick Details")]
-    //public float crouchKickDelay = .25f;
-    //private float crouchKickTimer;
-    //private bool crouchKick = false;
     public Transform crouchKickPoint;
     public float crouchKickRadius = .25f;
     public int crouchKickDamage = 25;
@@ -108,8 +105,6 @@ public class Player : MonoBehaviour
     {
 
         InvulnerabilityCountdown();
-
-        //Debug.Log("Testing Y on release " + direction.y);
 
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
 
